@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画个树</title>
+</head>
+<body>
+    <div>
+        <figure>
+            <figcaption>绘制一棵树</figcaption>
+
+            <div class="tree">
+                <div class="branch">
+                    <span class="leaf"></span>
+                    <span class="leaf"></span>
+                    <span class="leaf"></span>
+                </div>
+                <div class="branch">
+                    <span class="leaf"></span>
+                    <span class="leaf"></span>
+                </div>
+                <div class="branch">
+                    <span class="leaf"></span>
+                    <span class="leaf"></span>
+                </div>
+            </div>
+        </figure>
+    </div>
+</body>
+<style>
+    figcaption{
+        text-align: center;
+    }
+    .tree {
+        border-radius: 15px 15px 0px 0px;
+        width: 30px;
+        height: 300px;
+        background: darkgreen;
+        margin: auto;
+    }
+
+    .tree .branch {
+        display: flex;
+        justify-content: space-around;
+        width: 100px;
+        height: 20px;
+        background: green;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .tree .branch:nth-child(odd) {
+        padding-left: 20px;
+        transform: rotate(-30deg) translate(-8px,38px);
+        background: green;
+    }
+
+    .tree .branch:nth-child(even) {
+        padding-right: 20px;
+        transform: rotate(30deg) translate(-70px,80px);
+        background: green;
+    }
+
+    .tree .branch .leaf{
+        width: 20px;
+        height: 20px;
+        border-radius: 20px 0px;
+        background: greenyellow;
+        transform: translateY(-15px);
+    }
+
+    .tree .branch:nth-child(even) .leaf{
+        transform: rotate(-95deg) translateX(20px);
+    }
+</style>
+</html>
