@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="man">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="foot"></div>
+</div>
+<style>
+    .man {
+        width: 35em;
+        height: 50em;
+        position: relative;
+        font-size: 9px;
+    }
+
+    .head {
+        width: 10em;
+        height: 10em;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        right: 10em;
+    }
+
+    .body {
+        width: 10em;
+        height: 32em;
+        background: black;
+        border-radius: 80% 20% 0% 30%;
+        position: absolute;
+        top: 9em;
+        left: 8em;
+    }
+
+    .foot::before, .foot::after {
+        content: "";
+        position: absolute;
+        width: 6em;
+        height: 1.8em;
+        border-radius: 1em 80% 0.3em 0.3em;
+        background: black;
+        top: 56em;
+        left: 10em;
+    }
+    .foot::after{
+        transform: translate(10em,-1.3em) rotate( 10deg);
+    }
+</style>
+</body>
+</html>
