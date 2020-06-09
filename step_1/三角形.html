@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三角形</title>
+<!--    还是用 vue 吧-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="triangle">
+            <div class="row" v-for="nums in rows">
+                <span class="element" v-for="num in nums"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        let App = new Vue({
+            el:'#app',
+            data:{
+                rows:5,
+            }
+        })
+    </script>
+    <style>
+        .triangle{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .triangle .row{
+            display: flex;
+            justify-content: space-around;
+        }
+        .triangle .row .element{
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            margin: 3px;
+        }
+        .triangle .row .element{
+            background: silver;
+        }
+        .triangle .row .element:first-child{
+            background: green;
+        }
+        .triangle .row .element:last-child{
+            background: red;
+        }
+        .triangle .row:last-child .element{
+            background: greenyellow;
+        }
+    </style>
+</body>
+</html>

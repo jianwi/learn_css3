@@ -10,18 +10,23 @@
             <figcaption>绘制一棵树</figcaption>
 
             <div class="tree">
-                <div class="branch">
-                    <span class="leaf"></span>
-                    <span class="leaf"></span>
-                    <span class="leaf"></span>
+                <div class="body">
+                    <div class="branch">
+                        <span class="leaf"></span>
+                        <span class="leaf"></span>
+                        <span class="leaf"></span>
+                    </div>
+                    <div class="branch">
+                        <span class="leaf"></span>
+                        <span class="leaf"></span>
+                    </div>
+                    <div class="branch">
+                        <span class="leaf"></span>
+                        <span class="leaf"></span>
+                    </div>
                 </div>
-                <div class="branch">
-                    <span class="leaf"></span>
-                    <span class="leaf"></span>
-                </div>
-                <div class="branch">
-                    <span class="leaf"></span>
-                    <span class="leaf"></span>
+                <div class="foot">
+
                 </div>
             </div>
         </figure>
@@ -32,13 +37,15 @@
         text-align: center;
     }
     .tree {
-        border-radius: 15px 15px 0px 0px;
-        width: 30px;
-        height: 300px;
-        background: darkgreen;
         margin: auto;
     }
-
+    .tree .body{
+        margin: auto;
+        border-radius: 15px 15px 0px 0px;
+        width: 30px;
+        background: darkgreen;
+        height: 300px;
+    }
     .tree .branch {
         display: flex;
         justify-content: space-around;
@@ -71,6 +78,13 @@
 
     .tree .branch:nth-child(even) .leaf{
         transform: rotate(-95deg) translateX(20px);
+    }
+    .tree .foot{
+        margin: auto;
+        width: 150px;
+        height: 50px;
+        background: black;
+        border-radius: 100px 100px 0px 0px;
     }
 </style>
 </html>
