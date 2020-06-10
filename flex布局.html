@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex 布局</title>
+</head>
+<body>
+<figcaption>居中</figcaption>
+<p style="flex-basis: 500px">justify 控制水平对齐，align-items 控制垂直对齐</p>
+<figure style="display: flex ">
+    <div>
+        <p>不居中</p>
+        <div class="container">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div>
+        <p>垂直居中</p>
+        <div class="container"
+            style="align-items: center"
+        >
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div>
+        <p>水平居中</p>
+        <div class="container"
+             style="justify-content: center"
+        >
+            <div class="circle"></div>
+        </div>
+    </div>
+    <div>
+        <p>水平垂直居中</p>
+        <div class="container"
+             style="justify-content: center;align-items: center"
+        >
+            <div class="circle"></div>
+        </div>
+    </div>
+</figure>
+
+
+<figure>
+    <figcaption>排列方式</figcaption>
+    <p>
+        justify-content:
+            flex-start 表示 主轴 向开始的方向对齐
+            flex-end 相反，
+            space-between 首位紧挨着边缘
+        justify-content: space-around表示首尾的两个元素与容器边框的距离是元素之间间距的一半，各元素平均排列
+    </p>
+    <div>
+        <p>主轴是 水平方向 ，主轴靠start对齐，交叉轴靠end 对齐 </p>
+        <div style="display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-end;
+        border: 3px solid red;
+        width: 300px;
+        height: 130px;
+">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <p>主轴是 水平方向 ，主轴靠end，交叉轴对齐 start </p>
+        <div style="display: flex;
+         flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        border: 3px solid red;
+        width: 300px;
+        height: 130px;
+">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <p>主轴是 垂直方向 ，主轴靠end，交叉轴对齐 start </p>
+        <div style="display: flex;
+         flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        border: 3px solid red;
+        width: 180px;
+        height: 300px;
+">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <p>主轴是 垂直方向 ，space-around </p>
+        <div style="display: flex;
+         flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        border: 3px solid red;
+        width: 180px;
+        height: 300px;
+">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</figure>
+<style>
+    .container {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        border: solid 1px grey;
+        flex-wrap: wrap;
+    }
+
+    .circle {
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background: black;
+    }
+</style>
+</body>
+</html>
