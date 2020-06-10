@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>奥运五环</title>
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <style>
+        .container{
+            position: relative;
+            font-size: 5px;
+        }
+        .container .circle{
+            position: absolute;
+            width: 20em;
+            height: 20em;
+            border-style: solid;
+            border-width: 2em;
+            border-radius: 50%;
+        }
+        .container .circle:nth-child(1)
+        {
+            border-color: cornflowerblue;
+            z-index: 1;
+        }
+        .container .circle:nth-child(2)
+        {
+            border-color: black;
+            z-index: 22;
+            left: 25em;
+        }
+        .container .circle:nth-child(3)
+        {
+            border-color: red;
+            z-index: 33;
+            left: 50em;
+        }
+        .container .circle:nth-child(4)
+        {
+            border-color: orange;
+            z-index: 3;
+            left: 12em;
+            top: 14em;
+        }
+        .container .circle:nth-child(5)
+        {
+            z-index: 23;
+            border-color: darkseagreen;
+            left: 37.6em;
+            top: 14em;
+        }
+    </style>
+</body>
+</html>
