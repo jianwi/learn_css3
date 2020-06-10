@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid 布局</title>
+</head>
+<body>
+    <p>
+        grid 布局相当于弄一个矩阵
+    </p>
+    <div class="container">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="container">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <style>
+        .container{
+            display: grid;
+            font-size: 10px;
+            background: lightblue;
+            grid-gap: 0.5em;
+            margin: 20px 0px 20px 0px;
+        }
+        .container span{
+            width: 5em;
+            height: 5em;
+            border-radius: 50%;
+            background: darkcyan;
+        }
+
+        .container:nth-child(odd)
+        {
+            grid-template-columns: repeat(4,1fr);
+        }
+        .container:nth-child(even)
+        {
+            grid-template-columns: repeat(5,1fr);
+        }
+    </style>
+</body>
+</html>
