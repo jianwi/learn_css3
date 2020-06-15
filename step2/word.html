@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>字母</title>
 </head>
 <body>
-
+<div class="word">
+    <div>c</div>
+    <div>s</div>
+    <div>s</div>
+</div>
+<style>
+        .word{
+            font-size: 100px;
+            color: orange;
+            text-transform: uppercase;
+            width: 2em;
+            display: flex;
+            justify-content: space-around;
+        }
+    .word div{
+        position: relative;
+    }
+    .word div::before{
+        content: '';
+        position: absolute;
+        background: moccasin;
+        transform: rotate(-25deg);
+        width: 150%;
+        border-radius: 0.1em;
+        height: 100%;
+        left: -15%;
+        z-index: -1;
+    }
+</style>
 </body>
 </html>
