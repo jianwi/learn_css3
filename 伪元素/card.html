@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="web-development">
-    <div class="html">html</div>
+    <div class="html" data-attr="content 引用属性">html</div>
     <div class="css">css</div>
     <div class="javascript">javascript</div>
 </div>
@@ -26,7 +26,7 @@
         margin-top: 2em;
     }
     .html::before{
-        content: "<";
+        content: attr(data-attr);
     }
     .html::after{
         content: "/>";
