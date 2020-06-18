@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卡片</title>
+</head>
+<body>
+<div class="web-development">
+    <div class="html">html</div>
+    <div class="css">css</div>
+    <div class="javascript">javascript</div>
+</div>
+<style>
+    .web-development{
+        padding: 1em;
+        width: 150px;
+        height: 200px;
+        background: skyblue;
+        color: blue;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 0.5em;
+        box-shadow: 1px 1px black;
+    }
+    .web-development div{
+        margin-top: 2em;
+    }
+    .html::before{
+        content: "<";
+    }
+    .html::after{
+        content: "/>";
+    }
+    .css::before{
+        content: ".";
+    }
+    .css::after{
+        content: "::";
+    }
+    .javascript::before{
+        content: "{";
+    }
+    .javascript::after{
+        content: "}";
+    }
+</style>
+</body>
+</html>
