@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="heart">
+
+    </div>
+    <style>
+        .heart{
+            font-size: 10px;
+            display: flex;
+            color: red;
+        }
+        .heart::before,.heart::after{
+            content: "";
+            width: 10em;
+            height: 16em;
+            border-radius: 5em 5em 0 0;
+        }
+        .heart::before{
+            background: currentColor;
+            transform-origin: right bottom;
+            transform: rotate(45deg);
+        }
+        .heart::after{
+            background: currentColor;
+            transform-origin: left bottom;
+            transform: rotate(-45deg);
+        }
+
+    </style>
+</body>
+</html>
