@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电脑</title>
+</head>
+<body>
+    <div class="computer">
+        <div class="monitor"></div>
+        <div class="host"></div>
+    </div>
+
+    <style>
+        .computer{
+            width: 500px;
+            height: 600px;
+            font-size: 8px;
+            margin: auto;
+            position: relative;
+        }
+        .computer >*{
+            position: relative;
+        }
+        .computer >*::after,.computer >*::before{
+            content: "";
+            position: absolute;
+        }
+        .monitor{
+            width: 40em;
+            height: 26em;
+            border: #b6fab6 solid 2em;
+            position: relative;
+        }
+        .monitor::before{
+            width: 5em;
+            height: 10em;
+            background: #b6fab6;
+            left: 17.5em;
+            top: 100%;
+        }
+        .monitor::after{
+            top: 36em;
+            width: 16em;
+            height: 3em;
+            background: #b6fab6;
+            left: 12em;
+        }
+
+        .host{
+            position: absolute;
+            top: 0px;
+            left: 48em;
+            width: 15em;
+            height: 36em;
+            border: solid #b6fab6 2em;
+        }
+        .host::before{
+            width: 13em;
+            height: 2em;
+            background: #b6fab6;
+            top: 23em;
+            left: 1em;
+            box-shadow: 0em 3em #b6fab6;
+        }
+        .host::after{
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            background: #b6fab6;
+            position: absolute;
+            bottom: 1em;
+            right: 5em;
+            box-shadow: 3.6em 0em 0 0.8em #b6fab6;
+        }
+    </style>
+</body>
+</html>
