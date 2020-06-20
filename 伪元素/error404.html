@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>error404</title>
+</head>
+<body>
+    <div id="app">
+        ERROR 404
+    </div>
+
+    <style>
+        body{
+            padding: 80px;
+            background: slategray;
+        }
+        #app{
+            position: relative;
+            width: 6em;
+            color: whitesmoke;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 50px;
+            padding: 0.6em 0.4em;
+        }
+        #app::before,#app::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0.2em solid orange;
+            box-sizing: border-box;
+            transform: rotate(45deg);
+            box-shadow: 0.3em 0.3em 0.3em hsla(0,0%,35%,0.8);
+        }
+        #app::before{
+            border-style: solid;
+            z-index: -1;
+        }
+        #app::after{
+            border-style: none solid solid;
+        }
+
+    </style>
+</body>
+</html>

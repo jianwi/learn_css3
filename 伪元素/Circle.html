@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不同色彩的圆</title>
+</head>
+<body>
+    <div id="circle">
+
+    </div>
+
+
+    <style>
+
+
+        #circle, #circle::before,#circle::after{
+            width: 10em;
+            height: 10em;
+            box-sizing: border-box;
+            border-radius: 50%;
+            border-top: solid 5px currentColor;
+            position: relative;
+        }
+        #circle::before,#circle::after{
+            content: "";
+            position: absolute;
+        }
+        #circle{
+           color: red;
+        }
+        #circle::before{
+            color: yellow;
+            transform: rotate(120deg);
+        }
+        #circle::after{
+            color: #28c6f6;
+            transform: rotate(240deg);
+
+        }
+    </style>
+</body>
+</html>
