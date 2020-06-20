@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钟摆</title>
+</head>
+<body>
+<div class="pendulums">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<style>
+    .pendulums {
+        border-top: 3px solid black;
+        width: 300px;
+        position: relative;
+        margin: auto;
+    }
+
+    .pendulums div {
+        width: 2px;
+        background: black;
+        position: absolute;
+        left: 120px;
+        transform-origin: 50% top;
+    }
+
+    .pendulums div:nth-child(1) {
+        transform: rotate(40deg);
+        height: 120px;
+    }
+
+    .pendulums div:nth-child(2) {
+        transform: rotate(25deg);
+        height: 130px;
+    }
+
+    .pendulums div:nth-child(3) {
+        transform: rotate(10deg);
+        height: 160px;
+    }
+
+    .pendulums div:nth-child(4) {
+        transform: rotate(0deg);
+        height: 180px;
+    }
+
+    .pendulums div:nth-child(5) {
+        transform: rotate(-13deg);
+        height: 210px;
+    }
+    .pendulums div::after{
+        content: "";
+        width: 2em;
+        height: 2em;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 100%;
+        left: -17px;
+        box-shadow: -1em 4em 1em rgba(100,100,100,.5);
+    }
+</style>
+</body>
+</html>
