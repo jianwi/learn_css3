@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同心圆</title>
+</head>
+<body>
+    <div class="circle">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <style>
+        body{
+            background: black;
+        }
+        .circle{
+            position: relative;
+            font-size: 10px;
+        }
+        .circle div{
+            border-color: #b6fab6;
+            border-radius: 50%;
+            border-style: solid;
+            position: absolute;
+        }
+        .circle div:nth-child(1)
+        {
+            width: 20em;
+            height: 20em;
+            background: moccasin;
+            left: 15em;
+            top:15em
+        }
+        .circle div:nth-child(2)
+        {
+            width: 25em;
+            height: 25em;
+            border-width: 0.8em;
+            left: 12em;
+            top:12em;
+            filter: opacity(70%);
+        }
+        .circle div:nth-child(3)
+        {
+            width: 30em;
+            height: 30em;
+            border-width: 0.4em;
+            top: 10em;
+            left: 10em;
+            filter: opacity(60%);
+        }
+        .circle div:nth-child(3)
+        {
+            width: 35em;
+            height: 35em;
+            border-width: 0.4em;
+            top: 7.5em;
+            left: 7.5em;
+            filter: blur(0.3em);
+        }
+        .circle div:nth-child(4)
+        {
+            width: 45em;
+            height: 45em;
+            border-width: 0.2em;
+            top: 4em;
+            left: 4em;
+            filter: blur(0.6em);
+        }
+        .circle div:nth-child(4)
+        {
+            width: 45em;
+            height: 45em;
+            border-width: 0.2em;
+            top: 4em;
+            left: 4em;
+            filter: blur(0.6em);
+        }
+        .circle div:nth-child(5)
+        {
+            width: 55em;
+            height: 55em;
+            border-width: 0.2em;
+            top: 0.8em;
+            left: 0.8em;
+            filter: blur(0.6em);
+        }
+
+    </style>
+</body>
+</html>
