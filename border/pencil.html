@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pencil</title>
+</head>
+<body>
+<div class="pencil">
+    <div class="taper"></div>
+    <div class="body">家里蹲牌铅笔</div>
+    <div class="eraser"></div>
+</div>
+<style>
+    .pencil {
+        width: 500px;
+        height: 2.3em;
+        display: flex;
+    }
+
+    .pencil .taper {
+        width: 2em;
+        background: transparent;
+        position: relative;
+    }
+
+    .pencil .taper::before,.pencil .taper::after {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border: solid;
+        border-width: 1.15em 2em 1.15em 0em;
+        border-color: transparent currentColor transparent transparent;
+    }
+    .pencil .taper::before{
+        color: darkturquoise;
+    }
+    .pencil .taper::after{
+        color: black;
+        transform-origin: left;
+        transform: scale(0.4);
+
+    }
+
+    .pencil .body {
+        width: 20em;
+        font-size: 0.8em;
+        text-align: center;
+        color: gold;
+        background: darkgreen;
+        border-color: forestgreen;
+        border-style: solid;
+        border-width: 0.5em 0;
+        letter-spacing: 0.5em;
+        padding: 0.1em;
+    }
+
+
+    .pencil .eraser {
+        width: 2.3em;
+        background: wheat;
+        border-color: #eae8e8;
+        border-style: solid;
+        border-width: 0.5em 0;
+        position: relative;
+    }
+
+    .pencil .eraser::before{
+        content: "";
+        position: absolute;
+        top: -0.5em;
+        width: 0.8em;
+        box-sizing: border-box;
+        height: 2.3em;
+        background: silver;
+        border-color: lightgray;
+        border-style: solid;
+        border-width: 0.5em 0;
+        z-index: 111;
+    }
+</style>
+</body>
+</html>
