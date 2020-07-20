@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud</title>
+</head>
+<body>
+  <div class="cloud">
+
+  </div>
+
+  <style>
+    body{
+      background: #28c6f6;
+    }
+    .cloud{
+      width: 10em;
+      height: 10em;
+      color: whitesmoke;
+      border-radius: 50% 50% 0 0/50%;
+      background: currentColor;
+      margin: auto;
+    }
+    .cloud::before,.cloud::after{
+      display: block;
+      content: "";
+      background: currentColor;
+    }
+    .cloud::before{
+      width: 7em;
+      height: 7em;
+      border-radius: 50% 0 0 50%;
+      transform: translate(-3.5em,3em);
+    }
+    .cloud::after{
+      width: 7.6em;
+      height: 7.6em;
+      border-radius: 0 50% 50% 0;
+      transform: translate(6em,-4.6em);
+    }
+
+
+  </style>
+</body>
+</html>
