@@ -8,6 +8,9 @@
     <div class="box">
 
     </div>
+    <div class="plus">
+
+    </div>
     <style>
         .box
         {
@@ -16,8 +19,22 @@
             width: 20em;
             height: 10em;
             background: #28c6f6;
-            box-shadow: 0em 0em 0.2em 1em  hsla(0,0%,0%,.1),1em 1em 0.3em red;
+            box-shadow: 0em 0em 0.2em 1em  hsla(0,0%,0%,.1),1em 1em 0.3em red,2em 3em 0.1em green;
             border-radius: 30% 30%/50% 50%;
+        }
+        .plus{
+            width: 1.5em ;
+            height: 1.5em;
+            border-radius: 50%;
+            margin: 10em;
+            color: #27373b;
+            background: currentColor;
+            box-shadow: -2em 0 currentColor,
+            2em 0 currentColor,
+            0 2em currentColor,
+            0 -2em currentColor,
+            0em 0em .1em 3em #28c6f6
+        ;
         }
     </style>
 </body>
