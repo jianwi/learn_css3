@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clip</title>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <div class="cir">
+        圆形裁剪
+    </div>
+    <div class="elipse">
+        椭圆裁剪
+    </div>
+    <div class="polygon"></div>
+    <style>
+        div{
+            width: 10em;
+            height: 10em;
+            background: #27373b;
+        }
+        .box{
+
+            border-radius: 50%;
+            clip-path: inset(0.2em 0.5em 1em 0.3em);
+        }
+        .cir{
+            background: linear-gradient(45deg,red 10% ,yellow 50%,green 90%);
+            clip-path: circle(50% at 0% 0%);
+        }
+        .elipse{
+            clip-path: ellipse(10em 3em at left center);
+        }
+        .polygon{
+            clip-path: polygon(0em 0em,2em 3em,8em 3em,2em 0em,4em 1em);
+        }
+    </style>
+</body>
+</html>
