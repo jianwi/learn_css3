@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正方体</title>
+</head>
+<body>
+    <div class="cube">
+    </div>
+    <style>
+        .cube{
+            margin: 5em;
+            color: #28c6f6;
+            width: 10em;
+            height: 10em;
+            background: currentColor;
+            position: relative;
+            transform: rotate(20deg);
+            transition-duration: 1s;
+        }
+        .cube:hover{
+            transform: rotate(11950deg);
+        }
+        .cube::after,.cube::before{
+            position: absolute;
+            content: "";
+            display: block;
+            width: 10em;
+            height: 5em;
+        }
+        .cube::before{
+            background: red;
+            transform: skew(-50deg);
+            height: 2em;
+            top:-2em;
+            left: 1.2em;
+        }
+        .cube::after{
+            background: #42b883;
+            transform: skewY(-40deg);
+            width: 2.5em;
+            height: 10em;
+            left: 10em;
+            top: -1em;
+        }
+    </style>
+</body>
+</html>
