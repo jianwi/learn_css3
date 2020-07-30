@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>计数</title>
 </head>
 <body>
-
+<div class="box">
+    <div class="in"></div>
+    <div class="in"></div>
+    <div class="in"></div>
+    <div class="in"></div>
+    <div class="in"></div>
+    <div class="in"></div>
+    <div class="in"></div>
+    <div class="in"></div>
+    <div class="in"></div>
+    <div class="in"></div>
+</div>
+<style>
+        .box{
+            counter-reset: n;
+            font-size: 30px;
+            background: hsl(50,0%,90%);
+            width: 10em;
+            height: 10em;
+        }
+        .box .in{
+            counter-increment: n;
+            width: 1em;
+            height: 1em;
+            background: hsl(30,10%,70%);
+        }
+    .box .in::before{
+        content: counter(n);
+    }
+</style>
 </body>
 </html>
