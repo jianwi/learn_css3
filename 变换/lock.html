@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>锁</title>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <style>
+        body{
+            padding: 10em;
+        }
+        .top{
+            width: 6em;
+            height: 5em;
+            border: #28c6f6 solid;
+            border-width: 0 1em;
+            position: relative;
+            transition-duration: 1s;
+            transform-origin: 93% bottom;
+        }
+        .top:hover{
+            transform: rotateY(180deg);
+        }
+        .top::before{
+            color: #28c6f6;
+            content: "";
+            display: block;
+            position: absolute;
+            left: -3.5em;
+            top: -2.5em;
+            width: 11em;
+            height: 30em;
+            border-radius: 50%/35%;
+            border: solid 1em;
+            border-color: currentColor transparent transparent transparent;
+        }
+        .bottom{
+            width: 8em;
+            height: 9em;
+            background: #28c6f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bottom::before{
+            content: "";
+            display: block;
+            width: 2em;
+            height: 3em;
+            background: white;
+            border-radius: 50%/30%;
+        }
+
+
+    </style>
+</body>
+</html>
