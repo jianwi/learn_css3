@@ -14,12 +14,19 @@
             width: 20em;
             height: 10em;
             background: black;
+            /*
+                回到当前状态时，按以下的来
+            */
             transition: background 5s, border-radius 3s 2s,box-shadow 5s 1s steps(5);
         }
         .change_color:hover{
+            /*
+                hover 的时候，延迟2s,1s改变颜色
+            */
             background: yellow;
             border-radius: 50%;
             box-shadow: 100px 100px gray;
+            transition: background 1s 2s;
         }
     </style>
 </body>
