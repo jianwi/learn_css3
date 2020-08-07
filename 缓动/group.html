@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一组元素缓动</title>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <style>
+        .container div:nth-child(2)
+        {
+            --n:2
+        }
+        .container div:nth-child(3){
+            --n:3
+        }
+        .container div:nth-child(4)
+        {
+            --n: 4;
+        }
+        .container div:nth-child(5)
+        {
+            --n:5
+        }
+        .container div:nth-child(6){
+            --n: 6;
+        }
+        .container div{
+            display: inline-block;
+            margin: .5em;
+            width: 2em;
+            height: 2em;
+            background: #28c6f6;
+            transition-delay: calc(var(--n)*.5s);
+            transition-duration: 2s;
+        }
+        .container:hover div{
+            background: #b6fab6;
+            transform: translate(calc(var(--n)*5em),12em) scale(3);
+
+        }
+    </style>
+</body>
+</html>
